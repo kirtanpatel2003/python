@@ -27,7 +27,7 @@ while True:
             mycursor.execute("insert into empl_details values('"+EMP_NO+"','"+NAME+"','"+DEPT+"','"+MN+"')")
             mydb.commit()
             print("Account is successfully created!!!")
-        except:
+        except Exception as e:
             print("""
                   Error in creating record...
                   """)
@@ -36,7 +36,7 @@ while True:
             mycursor.execute("select * from empl_details")
             rec=mycursor.fetchall()
             print(tabulate(rec,headers=["emp_no","name","dept","mobileno"],tablefmt="fancy_grid"))
-        except:
+        except Exception as e:
             print("Error in Displaying record")
     elif ch==0:
         break
