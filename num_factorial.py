@@ -23,4 +23,4 @@ def num_factorial(n):
     return fact
 
 num = int(input("Enter The Number : "))
-print("Factorial of", num, "is", fctrl(num))
+print("Factorial of", num, "is", num_factorial(num))
