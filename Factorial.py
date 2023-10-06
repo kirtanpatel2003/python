@@ -5,7 +5,7 @@ Created on Wed Dec 2 21:29:53 2020
 @author: Kirtan
 """
 
-def fctrl(n):
+def num_factorial(n):
     """
     Calculate the factorial of a given number.
 
@@ -17,11 +17,10 @@ def fctrl(n):
     """
     if n == 0:
         return 1
-    else:
-        fact = 1
-        for i in range(1, n + 1):
-            fact *= i
-        return fact
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
 
 num = int(input("Enter The Number : "))
 print("Factorial of", num, "is", fctrl(num))
