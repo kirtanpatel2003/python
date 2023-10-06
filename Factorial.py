@@ -1,23 +1,27 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec  2 21:29:53 2020
+Created on Wed Dec 2 21:29:53 2020
 
 @author: Kirtan
 """
 
 def fctrl(n):
-    if n==0:
+    """
+    Calculate the factorial of a given number.
+
+    Parameters:
+        n (int): The input number.
+
+    Returns:
+        int: The factorial of the input number.
+    """
+    if n == 0:
         return 1
-     
-    elif n==1:
-        return 1
-    
-    elif n>=2:
+    else:
         fact = 1
-        for i in range (0,n):
-            fact *= n
-            n-=1
+        for i in range(1, n + 1):
+            fact *= i
         return fact
-    
+
 num = int(input("Enter The Number : "))
-print("Factorial of",num,"is", fctrl(num)) 
+print("Factorial of", num, "is", fctrl(num))
