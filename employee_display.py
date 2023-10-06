@@ -18,18 +18,17 @@ while True:
     print("2--> Display all records")
     print("0--> Exit")
     ch=int(input("Enter your choice:"))
-
     if ch==1:
         try: 
-            emp_no=str(input("Enter employee number:"))
-            name=input("Enter name(limit 35 characters):")
-            dept=str(input("Enter department name:"))
-            mn=str(input("Enter mobile no.:"))
-            mycursor.execute("insert into empl_details values('"+emp_no+"','"+name+"','"+dept+"','"+mn+"')")
+            EMP_NO=str(input("Enter employee number:"))
+            NAME=input("Enter name(limit 35 characters):")
+            DEPT=str(input("Enter department name:"))
+            MN=str(input("Enter mobile no.:"))
+            mycursor.execute("insert into empl_details values('"+EMP_NO+"','"+NAME+"','"+DEPT+"','"+MN+"')")
             mydb.commit()
             print("Account is successfully created!!!")
         except: 
-            print(""" 
+            print("""
                   Error in creating record...
                   """)
     elif ch==2:
