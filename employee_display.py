@@ -13,8 +13,7 @@ mycursor.execute("create database if not exists employee")
 mycursor.execute("use employee")
 mycursor.execute("create table if not exists empl_details(emp_no char(4) primary key,name varchar(30),dept char(20),mobileno char(10))")
 mydb.commit()
-while(True):
-    
+while True:
     print("1--> Create record")
     print("2--> Display all records")
     print("0--> Exit")
@@ -29,12 +28,10 @@ while(True):
             mycursor.execute("insert into empl_details values('"+emp_no+"','"+name+"','"+dept+"','"+mn+"')")
             mydb.commit()
             print("Account is successfully created!!!")
-        
         except: 
             print(""" 
                   Error in creating record...
                   """)
-            
     elif ch==2:
         try: 
             mycursor.execute("select * from empl_details")
@@ -42,11 +39,8 @@ while(True):
             print(tabulate(rec,headers=["emp_no","name","dept","mobileno"],tablefmt="fancy_grid"))
         except:
             print("Error in Displaying record")
-            
-            
     elif ch==0:
         break
-    
     else:
         print("""
               Enter Valid Choice...
