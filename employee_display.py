@@ -19,7 +19,7 @@ while True:
     print("0--> Exit")
     ch=int(input("Enter your choice:"))
     if ch==1:
-        try: 
+        try:
             EMP_NO=str(input("Enter employee number:"))
             NAME=input("Enter name(limit 35 characters):")
             DEPT=str(input("Enter department name:"))
@@ -27,12 +27,12 @@ while True:
             mycursor.execute("insert into empl_details values('"+EMP_NO+"','"+NAME+"','"+DEPT+"','"+MN+"')")
             mydb.commit()
             print("Account is successfully created!!!")
-        except: 
+        except:
             print("""
                   Error in creating record...
                   """)
     elif ch==2:
-        try: 
+        try:
             mycursor.execute("select * from empl_details")
             rec=mycursor.fetchall()
             print(tabulate(rec,headers=["emp_no","name","dept","mobileno"],tablefmt="fancy_grid"))
